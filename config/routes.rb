@@ -1,4 +1,4 @@
 Rails.application.routes.draw do
   root to: 'home#index'
-  resources :tweet, only: [:new, :create]
+  resources :tweets, only: [:new, :create]
 end
