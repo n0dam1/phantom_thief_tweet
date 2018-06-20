@@ -1,1 +1,4 @@
-<%= @tweet.content %>
+<%= tweet.content %>
+<%= form_with url: images_path, local: true do |f| %>
+  <%= f.submit "ツイート" %>
+<% end %>
