@@ -2,7 +2,7 @@ class TweetsController < ApplicationController
   def create
     @tweet = Tweet.new(tweet_params)
     @tweet.save
-    render template: 'images/new'
+    render template: 'images/new', locals: { tweet: @tweet }
   end
 
   private
