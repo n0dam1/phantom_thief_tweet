@@ -1,11 +1,17 @@
 class ImagesController < ApplicationController
   def create
     @image = Image.new(image_params)
-    @image.save
-    render 'tweets/new'
+    if @image.save
+      redirect_to @image
+    else
+      render :new
+    end
   end
 
   def new
+  end
+
+  def show
   end
 
   private
